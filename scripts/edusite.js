@@ -1,3 +1,3 @@
-'user strict';
+'use strict';
 
 var edusiteApp = angular.module("edusiteApp", [""]);
