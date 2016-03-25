@@ -1,3 +1,3 @@
 'use strict';
 
-var edusiteApp = angular.module("edusiteApp", [""]);
+var edusiteApp = angular.module("edusiteApp", []);
