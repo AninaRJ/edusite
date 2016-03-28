@@ -1,4 +1,7 @@
 edusiteApp.controller('UserController', function($scope){
-	$scope.firstName = "Ranjani";
-	$scope.interest = "Whatever"
+	$scope.user = {username: '', password: ''};
+	
+	$scope.submitform = function(){
+		console.log("submitted form");
+	};
 });
