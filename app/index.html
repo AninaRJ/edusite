@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Edusite</title>
+  <title>Format your excel</title>
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
   <link rel="stylesheet" href="../scripts/angular/angular-csp.css"/>
   <link rel="stylesheet" href="../css/app.css"/>
@@ -15,41 +15,44 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
   <script src="../scripts/edusite.js"></script>
   <script src="../scripts/controller/user_controller.js"></script>
+  <script src="../scripts/controller/user_service.js"></script>
  </head>
  <body ng-app="edusiteApp">
 	<div ng-controller="UserController as user" class="md-inline-form" layout="column">
 		<md-content>
 			<md-toolbar>
 			<div class="md-toolbar-tools">
-				<h3>Edusite </h3>
+				<h3>Format your sheets </h3>
 				
 			</div>
 			</md-toolbar>
 			<md-content layout-padding>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					The thing about this application is that you get to upload your excel sheet and it can format the way you want it to.
 				</p>
 			</md-content>
 			<md-content layout-padding layout-sm layout-align="end">
 				<form name="loginForm" class="login_form" novalidate ng-submit="submitform()">
 					<md-input-container>
-						<label class="labelStyle">User Name: </label>
+						<!--<label class="labelStyle">User Name: </label>
 						<input type="text" ng-model = "user.username" required/><br/>
 						<div ng-messages = "loginForm.user.username.$error">
 							<div ng-message="required">Please enter a username.</div>
-						</div>
+						</div>-->
+						<input type = "file" file-model = "myFile" class="md-button md-primary md-raised" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"/>
 					</md-input-container>
 					<br/>
 					<md-input-container>
-						<label class="labelStyle">Password: </label>
+						<!--<label class="labelStyle">Password: </label>
 						<input type="password" ng-model = "user.password" required/><br/>
 						<div ng-messages = "loginForm.user.password.$error">
 							<div ng-message="required">Please enter a password.</div>
-						</div>
+						</div>-->
+						
 					</md-input-container>
 					
 					<div layout="row">
-						<button class="md-button md-primary md-raised" ng-click="submitted=true">SUBMIT</button>
+						<button class="md-button md-primary md-raised" ng-click="uploadFile()">SUBMIT</button>
 					</div>
 				</form>
 			</md-content>
